@@ -6,13 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.sunxy.diffpatch.BsDiffAndPatchUtils;
+
 public class MainActivity extends AppCompatActivity {
 
     private String storePath = Environment.getExternalStorageDirectory().getAbsolutePath();
 
     String oldApkFile = storePath + "/apk/appOld.apk";
     String newApkFile = storePath + "/apk/appNew.apk";
-    String patchFile = storePath + "/apk/apk.patch";
 
     private String newPathFile = storePath + "/apk/apk_new1.patch";
     String newnewApkFile = storePath + "/apk/appNewNew.apk";

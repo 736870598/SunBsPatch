@@ -9,7 +9,7 @@
  * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
  */
 JNIEXPORT jint JNICALL
-Java_com_sunxy_sunbspatch_BsDiffAndPatchUtils_diff(JNIEnv *env, jclass type, jstring oldPath_jstr,
+Java_com_sunxy_diffpatch_BsDiffAndPatchUtils_diff(JNIEnv *env, jclass type, jstring oldPath_jstr,
                                                     jstring newPath_jstr, jstring patchPatch_jst) {
 
     int ret= -1;
@@ -41,18 +41,18 @@ Java_com_sunxy_sunbspatch_BsDiffAndPatchUtils_diff(JNIEnv *env, jclass type, jst
  * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
  */
 JNIEXPORT jint JNICALL
-Java_com_sunxy_sunbspatch_BsDiffAndPatchUtils_patch(JNIEnv *env, jclass type, jstring oldPath_jstr,
-                                                    jstring newPath_jstr, jstring patchPatch_jst) {
+    Java_com_sunxy_diffpatch_BsDiffAndPatchUtils_patch(JNIEnv *env, jclass type, jstring oldPath_jstr,
+            jstring newPath_jstr, jstring patchPatch_jst) {
 
-    int ret= -1;
+        int ret= -1;
 //    LOGD(" jni patch begin");
 
-    const char *oldPath = (*env) -> GetStringUTFChars(env, oldPath_jstr, NULL);
-    const char *newPath = (*env) -> GetStringUTFChars(env, newPath_jstr, NULL);
-    const char *patchPath = (*env) -> GetStringUTFChars(env, patchPatch_jst, NULL);
+        const char *oldPath = (*env) -> GetStringUTFChars(env, oldPath_jstr, NULL);
+        const char *newPath = (*env) -> GetStringUTFChars(env, newPath_jstr, NULL);
+        const char *patchPath = (*env) -> GetStringUTFChars(env, patchPatch_jst, NULL);
 
-    int argc = 4;
-    const char *argv[4];
+        int argc = 4;
+        const char *argv[4];
 
     argv[0] = "SunBsPatch";
     argv[1] = oldPath;
